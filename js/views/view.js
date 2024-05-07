@@ -6,9 +6,10 @@ export class View extends Observer {
     constructor(controller) {
         super();
         this.#controller = controller;
+        this.#controller.addObserver(this);
     }
 
     notify() {
-        document.querySelector('#txt-counter').innerText = this.#controller.counter;
+        document.querySelector('#txt-counter').innerText = this.#controller.getCounterValue();
     }
 }

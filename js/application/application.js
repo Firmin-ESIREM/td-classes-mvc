@@ -3,7 +3,6 @@ import { View } from './../views/view.js';
 
 let controller = new Controller();
 let view = new View(controller);
-controller.addObserver(view);
 
 document.querySelector('#btn-increment').addEventListener('click', () => {
     controller.incrementValue();
